@@ -27,8 +27,8 @@ export function Hero({ href }: { href: string }) {
           Decode the unknown. Outsmart the system. Compete against the clock. Enter Cyber Clash and test your skills in a battlefield of logic, puzzles, and cybersecurity challenges.
         </motion.p>
         <motion.div initial={reduce ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={enter(0.7, reduce)} className="flex flex-wrap gap-3">
-          <Button asChild className={ctaClass}><Link href={href}>Enter the arena</Link></Button>
-          <Button asChild variant="outline" className="display h-12 px-8 text-lg uppercase tracking-wide"><a href="#stages">Explore missions</a></Button>
+          <Button render={<Link href={href} />} className={ctaClass}>Enter the arena</Button>
+          <Button render={<a href="#stages" />} variant="outline" className="display h-12 px-8 text-lg uppercase tracking-wide">Explore missions</Button>
         </motion.div>
       </div>
 

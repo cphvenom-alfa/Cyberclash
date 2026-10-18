@@ -36,7 +36,7 @@ export function LandingNav({ signedIn, ctaHref }: { signedIn: boolean; ctaHref: 
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild variant="outline" size="sm" className="display hidden text-base uppercase sm:inline-flex"><Link href={ctaHref}>{signedIn ? "Dashboard" : "Log in"}</Link></Button>
+          <Button render={<Link href={ctaHref} />} variant="outline" size="sm" className="display hidden text-base uppercase sm:inline-flex">{signedIn ? "Dashboard" : "Log in"}</Button>
           <button onClick={() => setOpen((o) => !o)} aria-label="Menu" aria-expanded={open} className="grid h-10 w-10 place-items-center md:hidden">{open ? <X /> : <Menu />}</button>
         </div>
       </div>

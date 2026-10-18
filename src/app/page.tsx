@@ -68,7 +68,7 @@ export default async function Landing() {
               <div className="pointer-events-none absolute inset-y-0 right-0 -z-10 hidden w-1/2 opacity-40 [mask-image:linear-gradient(to_left,#000,transparent)] md:block" aria-hidden><CityArt /></div>
               <h2 className="display max-w-xl text-6xl sm:text-8xl">Ready to break the code?</h2>
               <div className="mt-8 flex flex-wrap items-center gap-4">
-                <Button asChild className={ctaClass}><Link href={href}>Enter the arena</Link></Button>
+                <Button render={<Link href={href} />} className={ctaClass}>Enter the arena</Button>
                 <a href="#stages" className="group display inline-flex items-center gap-2 text-lg text-[var(--cyan)] hover:text-white">See the stages <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></a>
               </div>
             </div>
